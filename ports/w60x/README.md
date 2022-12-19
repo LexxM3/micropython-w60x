@@ -32,17 +32,17 @@ You will need to update your `PATH` environment variable to include the cross to
 
     $ export PATH=$PATH:/opt/tools/arm-none-eabi-gcc/bin
 
-You can put this command in your `.profile` or `.bash_login` (or .bashrc if using Github Codespaces).
+You can put this command in your `.profile` or `.bash_login` (or `.bashrc` if using Github Codespaces).
 
-WM_SDK only supports the 4.x version of the GCC crosscompiler for compiling.  Note also that this crosscompiler is 32bit and you may need `sudo apt install lib32z1` if running on a 64bit Linux host (test by running `arm-none-eabi-gcc --version' -- if it runs, you're fine; if you get a bash "No such file or directory", first doublecheck your $PATH and, if $PATH is correct, then it's the 32bit issue).
+WM_SDK only supports the 4.x version of the GCC crosscompiler for compiling.  Note also that this crosscompiler is 32bit and you may need `sudo apt install lib32z1` if running on a 64bit Linux host (test by running `arm-none-eabi-gcc --version` -- if it runs, you're fine; if you get a bash "No such file or directory", first doublecheck your $PATH and, if $PATH is correct, then it's the 32bit issue).
 
-WM_SDK download address is [W60X_SDK](http://www.winnermicro.com/en/html/1/). WM_SDK must be G3.01 and newer versions (G3.04 is latest as of end of 2022).
+WM_SDK download address is [W60X_SDK](http://www.winnermicro.com/en/html/1/156/158/497.html), under the Software Data tab. WM_SDK must be G3.01 and newer versions (G3.04 is latest as of end of 2022).  You can also consider using the Github repo https://github.com/robert-hh/WM_SDK_W60X.
 
 You will need to update your `PATH` environment variable to include the path of WM_SDK. For example, you can issue the following commands on (at least) Linux:
 
     $ export WMSDK_PATH=/home/username/WM_SDK
 
-You can put this command in your `.profile` or `.bash_login` (or .bashrc if using Github Codespaces).
+You can put this command in your `.profile` or `.bash_login` (or `.bashrc` if using Github Codespaces).
 
 You also need to modify the build configuration file in WM_SDK, located at: `WM_SDK/Include/wm_config.h`
 
